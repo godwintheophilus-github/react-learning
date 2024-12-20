@@ -1,0 +1,39 @@
+Pre-Requisite:
+npm config set prefix ~/.npm-global
+export PATH=~/.npm-global/bin:$PATH
+
+
+1. npm install vite@latest -g
+
+2. npm create vite@latest
+
+```
+┌─[godwin@Godwins-MacBook-Air] - [~/projects/git/react-learning] - [Fri Dec 20, 12:19]
+└─[$] <git:(main*)> npm create vite@latest
+Need to install the following packages:
+  create-vite@latest
+Ok to proceed? (y) y
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'create-vite@6.1.0',
+npm WARN EBADENGINE   required: { node: '^18.0.0 || ^20.0.0 || >=22.0.0' },
+npm WARN EBADENGINE   current: { node: 'v16.13.2', npm: '8.1.2' }
+npm WARN EBADENGINE }
+✔ Project name: … learning-react
+✔ Select a framework: › React
+✔ Select a variant: › TypeScript
+
+Scaffolding project in /Users/godwin/projects/git/react-learning/learning-react...
+
+Done. Now run:
+
+  cd learning-react
+  npm install
+  npm run dev
+```
+3. Go inside the directory and run the commands
+
+```
+  cd learning-react
+  npm install
+  npm run dev
+```

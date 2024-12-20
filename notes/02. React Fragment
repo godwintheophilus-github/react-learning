@@ -1,0 +1,44 @@
+#### 1. In file ListGroup
+
+import { Fragment } from "react";
+
+````
+import React from "react";
+import { Fragment } from "react";
+const ListGroup = () => {
+  return (
+    <Fragment>
+      <ul className="list-group">
+        <li className="list-group-item">An item</li>
+        <li className="list-group-item">A second item</li>
+        <li className="list-group-item">A third item</li>
+        <li className="list-group-item">A fourth item</li>
+        <li className="list-group-item">And a fifth one</li>
+      </ul>
+    </Fragment>
+  );
+};
+
+export default ListGroup;
+````
+
+#### this can also be like below 
+
+````
+import React from "react";
+const ListGroup = () => {
+  return (
+    <> //nothing is needed, it is understood as fragment
+      <ul className="list-group">
+        <li className="list-group-item">An item</li>
+        <li className="list-group-item">A second item</li>
+        <li className="list-group-item">A third item</li>
+        <li className="list-group-item">A fourth item</li>
+        <li className="list-group-item">And a fifth one</li>
+      </ul>
+    </>
+  );
+};
+
+export default ListGroup;
+````
