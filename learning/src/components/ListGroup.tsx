@@ -1,24 +1,29 @@
 import React from "react";
-import { Fragment } from "react";
-const ListGroup = () => {
-  const labels = ["Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi"];
+import { Fragment, useState } from "react";
 
-  if (labels.length == 0) {
-    return (
-      <>
-        <ul className="list-group">
-          <li className="list-group-item">No items</li>
-        </ul>
-      </>
-    );
-  }
+interface ListGroupProps {
+  labels: string[];
+  heading: string;
+  active: any;
+  callBackFunction: (set: any) => void;
+}
 
+const ListGroup = (props: ListGroupProps) => {
   return (
     <>
       <ul className="list-group">
-        {labels.map((value) => {
+        {props.labels.length == 0 && <p>No Items</p>}
+        {props.labels.map((value, index) => {
           return (
-            <li className="list-group-item" key={value}>
+            <li
+              className={
+                props.active === index
+                  ? "list-group-item active"
+                  : "list-group-item"
+              }
+              key={value}
+              onClick={() => props.callBackFunction(index)}
+            >
               {value}
             </li>
           );

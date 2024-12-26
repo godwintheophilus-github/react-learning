@@ -4,13 +4,11 @@ import Message from "./Message";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+      <nav className="navbar bg-body-tertiary">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
             Navbar
           </a>
         </div>
