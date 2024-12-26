@@ -1,0 +1,37 @@
+#### Use state flow to change the color of the highlighted flow
+
+````
+import React from "react";
+import { Fragment, useState } from "react";
+const ListGroup = () => {
+  const labels = ["Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi"];
+  const [active, setactive] = useState(0);
+  const handleClick = (event, index) => {
+    console.log(event);
+    setactive(index);
+  };
+  return (
+    <>
+      <ul className="list-group">
+        {labels.length == 0 && <p>No Items</p>}
+        {labels.map((value, index) => {
+          return (
+            <li
+              className={
+                active === index ? "list-group-item active" : "list-group-item"
+              }
+              key={value}
+              onClick={(event) => handleClick(event, index)}
+            >
+              {value}
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
+export default ListGroup;
+
+````

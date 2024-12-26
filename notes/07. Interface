@@ -1,0 +1,9 @@
+#### create interface
+
+```
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+  callBackFunction: (item: string) => void;
+}
+```

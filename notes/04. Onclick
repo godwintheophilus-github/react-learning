@@ -1,0 +1,68 @@
+#### OnClick event
+
+````
+import React from "react";
+import { Fragment } from "react";
+const ListGroup = () => {
+  const labels = ["Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi"];
+
+  return (
+    <>
+      <ul className="list-group">
+        {labels.length == 0 && <p>No Items</p>}
+        {labels.map((value) => {
+          return (
+            <li
+              className="list-group-item"
+              key={value}
+              onClick={() => console.log(value)}
+            >
+              {value}
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
+export default ListGroup;
+
+````
+
+
+#### Or
+
+````
+import React from "react";
+import { Fragment } from "react";
+const ListGroup = () => {
+  const labels = ["Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi"];
+  const handleClick = (event) => {
+    console.log(event);
+  };
+  return (
+    <>
+      <ul className="list-group">
+        {labels.length == 0 && <p>No Items</p>}
+        {labels.map((value) => {
+          return (
+            <li className="list-group-item" key={value} onClick={handleClick}>
+              {value}
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
+export default ListGroup;
+
+````
+
+#### Or
+
+````
+
+````

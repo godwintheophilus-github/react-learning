@@ -1,0 +1,122 @@
+#### 1. Looping thought list item
+
+```
+import React from "react";
+import { Fragment } from "react";
+const ListGroup = () => {
+  const labels = ["Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi"];
+
+  if (labels.length == 0) {
+    return (
+      <>
+        <ul className="list-group">
+          <li className="list-group-item">No items</li>
+        </ul>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <ul className="list-group">
+        {labels.map((value) => {
+          return (
+            <li className="list-group-item" key={value}>
+              {value}
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
+export default ListGroup;
+
+```
+
+
+#### or we can do the below as well 
+
+````
+import React from "react";
+import { Fragment } from "react";
+const ListGroup = () => {
+  const labels = ["Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi"];
+
+  return (
+    <>
+      <ul className="list-group">
+        {labels.length == 0 ? <p>No Items</p> : null}
+        {labels.map((value) => {
+          return (
+            <li className="list-group-item" key={value}>
+              {value}
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
+export default ListGroup;
+
+````
+
+#### OR 
+
+````
+import React from "react";
+import { Fragment } from "react";
+const ListGroup = () => {
+  const labels = ["Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi"];
+  const message = (message) => {
+    return labels.length == 0 ? <p>{message}</p> : null;
+  };
+  return (
+    <>
+      <ul className="list-group">
+        {message("No Items")}
+        {labels.map((value) => {
+          return (
+            <li className="list-group-item" key={value}>
+              {value}
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
+export default ListGroup;
+
+````
+
+#### Or 
+
+````
+import React from "react";
+import { Fragment } from "react";
+const ListGroup = () => {
+  const labels = ["Chennai", "Hyderabad", "Mumbai", "Pune", "Delhi"];
+
+  return (
+    <>
+      <ul className="list-group">
+        {labels.length == 0 && <p>No Items</p>}
+        {labels.map((value) => {
+          return (
+            <li className="list-group-item" key={value}>
+              {value}
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+
+export default ListGroup;
+````
